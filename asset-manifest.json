@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Sphinx7777/Portfolio/static/css/main.79cf8ad9.chunk.css",
-    "main.js": "/Sphinx7777/Portfolio/static/js/main.1d96802b.chunk.js",
-    "main.js.map": "/Sphinx7777/Portfolio/static/js/main.1d96802b.chunk.js.map",
-    "runtime~main.js": "/Sphinx7777/Portfolio/static/js/runtime~main.36c5eda1.js",
-    "runtime~main.js.map": "/Sphinx7777/Portfolio/static/js/runtime~main.36c5eda1.js.map",
-    "static/js/2.f59fa08d.chunk.js": "/Sphinx7777/Portfolio/static/js/2.f59fa08d.chunk.js",
-    "static/js/2.f59fa08d.chunk.js.map": "/Sphinx7777/Portfolio/static/js/2.f59fa08d.chunk.js.map",
-    "index.html": "/Sphinx7777/Portfolio/index.html",
-    "precache-manifest.d8e527ef6e46c6cec6d70297aef0d8bf.js": "/Sphinx7777/Portfolio/precache-manifest.d8e527ef6e46c6cec6d70297aef0d8bf.js",
-    "service-worker.js": "/Sphinx7777/Portfolio/service-worker.js",
-    "static/css/main.79cf8ad9.chunk.css.map": "/Sphinx7777/Portfolio/static/css/main.79cf8ad9.chunk.css.map",
-    "static/media/Settings.ico": "/Sphinx7777/Portfolio/static/media/Settings.de627dcb.ico",
-    "static/media/add.ico": "/Sphinx7777/Portfolio/static/media/add.8234a030.ico",
-    "static/media/git.ico": "/Sphinx7777/Portfolio/static/media/git.2bcad980.ico",
-    "static/media/lamp.ico": "/Sphinx7777/Portfolio/static/media/lamp.b4166a32.ico",
-    "static/media/search3.ico": "/Sphinx7777/Portfolio/static/media/search3.7046d3c3.ico",
-    "static/media/telegram.ico": "/Sphinx7777/Portfolio/static/media/telegram.5e18d520.ico"
+    "main.css": "/Portfolio/static/css/main.79cf8ad9.chunk.css",
+    "main.js": "/Portfolio/static/js/main.4d3d0830.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.4d3d0830.chunk.js.map",
+    "runtime~main.js": "/Portfolio/static/js/runtime~main.0d45a3e0.js",
+    "runtime~main.js.map": "/Portfolio/static/js/runtime~main.0d45a3e0.js.map",
+    "static/js/2.f59fa08d.chunk.js": "/Portfolio/static/js/2.f59fa08d.chunk.js",
+    "static/js/2.f59fa08d.chunk.js.map": "/Portfolio/static/js/2.f59fa08d.chunk.js.map",
+    "index.html": "/Portfolio/index.html",
+    "precache-manifest.3c300d69ff9fd4d474686ef29a59cc86.js": "/Portfolio/precache-manifest.3c300d69ff9fd4d474686ef29a59cc86.js",
+    "service-worker.js": "/Portfolio/service-worker.js",
+    "static/css/main.79cf8ad9.chunk.css.map": "/Portfolio/static/css/main.79cf8ad9.chunk.css.map",
+    "static/media/Settings.ico": "/Portfolio/static/media/Settings.de627dcb.ico",
+    "static/media/add.ico": "/Portfolio/static/media/add.8234a030.ico",
+    "static/media/git.ico": "/Portfolio/static/media/git.2bcad980.ico",
+    "static/media/lamp.ico": "/Portfolio/static/media/lamp.b4166a32.ico",
+    "static/media/search3.ico": "/Portfolio/static/media/search3.7046d3c3.ico",
+    "static/media/telegram.ico": "/Portfolio/static/media/telegram.5e18d520.ico"
   }
 }
