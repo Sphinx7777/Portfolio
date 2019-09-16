@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1cbbbcbb0d9cef958a27412a261479ac",
+    "revision": "eb604cfa15d6fa86216629c45b7c9da2",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "43296a7ed542693040f4",
-    "url": "/Portfolio/static/css/main.a03184ef.chunk.css"
+    "revision": "b3b2d3c565258f0e2c84",
+    "url": "/Portfolio/static/css/main.37c0682f.chunk.css"
   },
   {
     "revision": "54ad8dd1bd6e1ae59109",
     "url": "/Portfolio/static/js/2.d2b28b87.chunk.js"
   },
   {
-    "revision": "43296a7ed542693040f4",
-    "url": "/Portfolio/static/js/main.9ae1cc95.chunk.js"
+    "revision": "b3b2d3c565258f0e2c84",
+    "url": "/Portfolio/static/js/main.3853588b.chunk.js"
   },
   {
     "revision": "a566dd03cfd7b035c02f",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/media/linkedIn.b3148231.ico"
   },
   {
-    "revision": "3d434c9231845d55db7fbd289b4e844e",
-    "url": "/Portfolio/static/media/resumeOnishchenkoSergei.3d434c92.pdf"
+    "revision": "1f9204e259e56185d37122e807812b23",
+    "url": "/Portfolio/static/media/resumeOnishenkoSergei.1f9204e2.pdf"
   },
   {
     "revision": "7046d3c316edf26478a2018c8d219f91",
