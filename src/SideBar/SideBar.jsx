@@ -3,8 +3,7 @@ import s from './SideBar.module.scss'
 import {NavLink} from "react-router-dom";
 
 
-
-export const SideBar = ({menuShowStatus,setToggleShowSideBar}) => {
+export const SideBar = ({menuShowStatus, setToggleShowSideBar}) => {
 
 	return (
 		<div className={!menuShowStatus ? s.sideBarWrapper : (s.sideBarWrapper + ' ' + s.disableShow)}>
@@ -22,7 +21,10 @@ export const SideBar = ({menuShowStatus,setToggleShowSideBar}) => {
 				<NavLink className={s.sideBarLink} to="/resume">
 					Резюме
 				</NavLink>
-				<div className={s.sideBarToClose} onClick={()=>{setToggleShowSideBar(true)}}>X</div>
+				<div className={s.sideBarToClose} onClick={() => {
+					setToggleShowSideBar(true)
+				}}>X
+				</div>
 			</div>
 		</div>
 	)

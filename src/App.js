@@ -23,7 +23,7 @@ class App extends Component {
 				<SideBar {...{menuShowStatus, setToggleShowSideBar}}/>
 				<div className={!menuShowStatus ? s.contentWrapper : s.contentWrapper + ' ' + s.contentDisableMenu}>
 					<Switch>
-						<Route exact path='/' render={() => <Todo {...this.props}/>}/>
+						<Route exact path='/' render={() => <Todo {...this.props} />}/>
 						<Route path='/resume' render={() =>
 							<Suspense fallback={<div>Загрузка...</div>}>
 							<Resume/>

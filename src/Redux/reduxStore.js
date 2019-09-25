@@ -5,9 +5,11 @@ import { reducer as formReducer } from 'redux-form';
 import { save} from 'redux-localstorage-simple'
 
 
+
 let reducers = combineReducers({
 	toDo: todoReducer,
-	form: formReducer
+	form: formReducer,
+
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__|| compose;
