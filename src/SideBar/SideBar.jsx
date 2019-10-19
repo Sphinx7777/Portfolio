@@ -15,9 +15,10 @@ export const SideBar = ({menuShowStatus, setToggleShowSideBar}) => {
 				<NavLink className={s.sideBarLink} to="/">
 					ToDo приложение
 				</NavLink>
-				<NavLink className={s.sideBarLink} to="/newToDo">
-					ToDo2 еще не начал
-				</NavLink>
+				<a className={s.sideBarLink} target='_blank' rel='noopener noreferrer'
+					 href="https://sphinx7777.github.io/reactTypeScript">
+					ToDo v.2.0 TypeScript
+				</a>
 				<NavLink className={s.sideBarLink} to="/resume">
 					Резюме
 				</NavLink>
