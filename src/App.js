@@ -26,7 +26,7 @@ class App extends Component {
 						<Route exact path='/' render={() => <Todo {...this.props} />}/>
 						<Route path='/resume' render={() =>
 							<Suspense fallback={<div>Загрузка...</div>}>
-							<Resume/>
+							<Resume />
 						</Suspense>}/>
 					</Switch>
 				</div>
