@@ -105,14 +105,14 @@ const setEditModeStatus = (status) => ({type: EDIT_MODE_STATUS, status});
 const setStatusMarkAllTasks = (status) => ({type: MARK_ALL_TASKS, status});
 const setToggleEditTask = (status) => ({type: TOGGLE_EDIT_TASK,status});
 const setEditStatusTask = (status) => ({type: EDIT_STATUS_TASK,...status});
-const setdefaultDataTask = (data) => ({type: DEFAULT_DATA_TASK,...data});
+const setDefaultDataTask = (data) => ({type: DEFAULT_DATA_TASK,...data});
 export const setToggleShowSideBar = (status) => ({type: TOGGLE_SHOW_SIDE_BAR,status});
 
 
 
 export const toggleEditStatus = (id,status,name,value) => {
 	return (dispatch) => {
-		dispatch(setdefaultDataTask({name,value}));
+		dispatch(setDefaultDataTask({name,value}));
 		dispatch(setEditStatusTask({id,status}));
 		dispatch(setToggleEditTask(status));
 	}

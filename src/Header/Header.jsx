@@ -5,8 +5,6 @@ import brother from "../images/sfinx.jpg";
 
 export const Header = ({menuShowStatus,setToggleShowSideBar}) => {
 
-
-
 	return (
 		<div className={!menuShowStatus ? s.headerWrapper : s.headerWrapper+' '+s.headerDisableMenu}>
 			<header className={s.header}>
@@ -18,7 +16,7 @@ export const Header = ({menuShowStatus,setToggleShowSideBar}) => {
 				</div>
 				<div>
 					<h2 className={s.headTitle}>Тренировочный проект</h2>
-					<span className={s.comment}>"Постоянно дорабатывается"</span>
+					<span className={s.comment}>"Ссылка на новую версию и резюме в меню"</span>
 				</div>
 				<div className={s.logo}>
 					<img className={s.logoImg} src={brother} alt="Логотип"/>

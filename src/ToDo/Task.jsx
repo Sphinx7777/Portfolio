@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import s from './ToDo.module.scss'
 import settings from '../images/settings.ico'
 import add from '../images/add.ico'
+import {EditNameInput} from "./EditNameInput";
+import {EditDescriptionArea} from "./EditDescriptionArea";
 
 
 export const Task = ({
@@ -42,28 +44,10 @@ export const Task = ({
 												}}>{t.name}
 								</span>
 							</div>
-								: <div>
-									<span
-										className={!error ? s.fieldEditMode : s.fieldEditMode + ' ' + s.error}>Min 1 && Max 25 symbols :
-									</span>
-									<input className={!error ? s.editName : s.editName + ' ' + s.error}
-												 defaultValue={t.name}
-												 maxLength='25'
-												 minLength='1'
-												 autoFocus={true}
-												 placeholder='Min 1 && Max 25 symbols'
-												 onChange={(event) => {
-													 setName(event.currentTarget.value)
-												 }}
-												 onKeyUp={(event) => {
-													 if (event.key === 'Enter') {
-														 setChangedText(t.id)
-													 } else if (event.key === 'Escape') {
-														 setError(false);
-														 toggleEditStatus(t.id, false);
-													 }
-												 }}/>
-								</div>
+								:<EditNameInput {...{
+									setChangedText, setName, setError,error,
+									toggleEditStatus, id:t.id, name:t.name
+								}}/>
 							}
 							<div><span>Дата создания : </span><span className={s.date}>{t.createDate}</span></div>
 						</div>
@@ -87,25 +71,11 @@ export const Task = ({
 												 : s.taskDescription + ' ' + s.taskDescriptionOff}>
 									{t.description ? t.description : 'Странно...что то да должно было быть...забыли написать наверное'}
 								</div>
-								: <div className={s.areaWrapper}>
-									<div className={!error ? s.areaEditMode : s.areaEditMode + ' ' + s.error}>Min 1 && Max 300 symbols
-									</div>
-									<textarea className={!error ? s.area : s.area + ' ' + s.error} cols='30' rows='3' maxLength='300'
-														minLength='1'
-														placeholder='Min 1 && Max 300 symbols'
-														defaultValue={t.description}
-														onChange={(e) => {
-															setEditValue(e.currentTarget.value)
-														}}
-														onKeyUp={(event) => {
-															if (event.key === 'Enter') {
-																setChangedText(t.id)
-															} else if (event.key === 'Escape') {
-																setError(false);
-																toggleEditStatus(t.id, false)
-															}
-														}}/>
-								</div>
+								:
+								<EditDescriptionArea {...{
+									setChangedText, description:t.description, setError,
+									toggleEditStatus, id:t.id, setEditValue,error
+								}}/>
 							}
 							{!t.editStatus
 								? <button className={s.taskEdit} title='Редактировать'

@@ -51,5 +51,3 @@ export const Footer = ({menuShowStatus}) => {
 	)
 };
 
-/*
-rel="noopener noreferrer"*/
