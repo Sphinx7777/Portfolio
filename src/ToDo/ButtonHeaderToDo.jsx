@@ -2,20 +2,34 @@ import React from 'react'
 import s from './ToDo.module.scss'
 
 
-export const ButtonHeaderToDo = ({tasks,removeTask,editDescriptionStatus,changeStatusTaskEditForm}) => {
-	let statusBtn = tasks.every(t => t.status === false);
-let disableBtnAdd = tasks.length>=50;
+export const ButtonHeaderToDo = (
+	{
+		tasks,removeTask,editDescriptionStatus,changeStatusTaskEditForm
+	}) => {
+
+	const statusBtn = tasks.every(t => t.status === false);
+
+	const disableBtnAdd = tasks.length>=50;
+
+	const setChangeStatusTaskEditForm = () => changeStatusTaskEditForm(true);
+
+	const dellTask = () => removeTask();
 
 	return (
 		<div className={s.todoButtons}>
-			<button className={s.todoBtnAdd} disabled={disableBtnAdd || editDescriptionStatus} onClick={() => {
-				changeStatusTaskEditForm(true)
-			}}>{!disableBtnAdd ? 'Добавить новое задание' : 'Максимум 50 заданий'}
+			<button className={s.todoBtnAdd}
+							disabled={disableBtnAdd || editDescriptionStatus}
+							onClick={setChangeStatusTaskEditForm}>
+				{
+					!disableBtnAdd
+						? 'Добавить новое задание'
+						: 'Максимум 50 заданий'
+				}
 
 			</button>
-			<button className={s.todoBtnDell} disabled={statusBtn} onClick={() => {
-				removeTask()
-			}}>
+			<button className={s.todoBtnDell}
+							disabled={statusBtn}
+							onClick={dellTask}>
 				Удалить завершенные
 			</button>
 		</div>
@@ -23,17 +37,23 @@ let disableBtnAdd = tasks.length>=50;
 };
 
 
-export const MarkAllTasks = ({allMark, changeStatusAllTasks}) => {
+
+export const MarkAllTasks = (
+	{
+		allMark, changeStatusAllTasks
+	}) => {
+
+	const setChangeStatusAllTasks = event => changeStatusAllTasks(event.target.checked);
 
 	return (
 		<div className={s.allMark}>
 			<input className={s.allMarkCheck}
-						 onChange={(event) => {
-							 changeStatusAllTasks(event.target.checked)
-						 }}
+						 onChange={setChangeStatusAllTasks}
 						 checked={allMark}
 						 type="checkbox"/>
-						 <span className={s.allMarkCheckDesc}>Отметить все</span>
+						 <span>
+							 Отметить все
+						 </span>
 		</div>
 	)
 };

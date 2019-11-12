@@ -5,33 +5,46 @@ import search3 from '../images/search3.ico'
 
 export const SearchTask = ({searchTaskByName, searchTaskByDescription}) => {
 
-	let [searchMode, setSearchMode] = useState(false);
+	const [searchMode, setSearchMode] = useState(false);
 
+	const toggleSearchMode = () => setSearchMode(!searchMode);
+
+	const searchToName = event => searchTaskByName(event.target.value);
+
+	const searchToDescription = event => searchTaskByDescription(event.target.value);
+
+	const searchClose = () => setSearchMode(false);
 
 	return (
 		<div className={s.searchWrapper}>
-			{!searchMode ? <div className={s.search} onClick={() => {setSearchMode(!searchMode)}}>
-				<img className={s.searchIcon}
-													src={search3}
-													alt="Открыть поисковую строку"
-													/>
-													Поиск
-			</div>
-				: <div className={s.searchWrapperContent}>
-					<div>
-						<input className={s.searchField} placeholder='По названию'
-									 onChange={(event) => {
-										 searchTaskByName(event.target.value)
-									 }}/>
+			{
+				!searchMode
+					? <div className={s.search}
+								 onClick={toggleSearchMode}>
+						<img className={s.searchIcon}
+								 src={search3}
+								 alt="Открыть поисковую строку"
+						/>
+						Поиск
 					</div>
-					<div>
-						<input className={s.searchField} placeholder='По описанию'
-									 onChange={(event) => {
-										 searchTaskByDescription(event.target.value)
-									 }}/>
+					: <div className={s.searchWrapperContent}>
+						<div>
+							<input className={s.searchField}
+										 placeholder='По названию'
+										 onChange={searchToName}
+							/>
+						</div>
+						<div>
+							<input className={s.searchField}
+										 placeholder='По описанию'
+										 onChange={searchToDescription}
+							/>
+						</div>
+						<span className={s.closeSearch}
+									onClick={searchClose}>
+							X
+						</span>
 					</div>
-					<span className={s.closeSearch} onClick={() => setSearchMode(false)}>X</span>
-				</div>
 			}
 		</div>
 	)

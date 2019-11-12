@@ -3,28 +3,41 @@ import s from './SideBar.module.scss'
 import {NavLink} from "react-router-dom";
 
 
-export const SideBar = ({menuShowStatus, setToggleShowSideBar}) => {
+export const SideBar = (
+	{
+		menuShowStatus, setToggleShowSideBar
+	}) => {
+
+	const showSideBar = () => setToggleShowSideBar(true);
 
 	return (
-		<div className={!menuShowStatus ? s.sideBarWrapper : (s.sideBarWrapper + ' ' + s.disableShow)}>
+		<div className={
+			!menuShowStatus
+				? s.sideBarWrapper
+				: (s.sideBarWrapper + ' ' + s.disableShow)
+		}>
 			<div className={s.sideBar}>
-				<a className={s.sideBarLink} target='_blank' rel='noopener noreferrer'
+				<a className={s.sideBarLink}
+					 target='_blank'
+					 rel='noopener noreferrer'
 					 href="https://sphinx7777.github.io/SocialNetvork">
 					Проект социальной сети
 				</a>
 				<NavLink className={s.sideBarLink} to="/">
 					ToDo приложение
 				</NavLink>
-				<a className={s.sideBarLink} target='_blank' rel='noopener noreferrer'
+				<a className={s.sideBarLink}
+					 target='_blank'
+					 rel='noopener noreferrer'
 					 href="https://sphinx7777.github.io/reactTypeScript">
 					ToDo v.2.0 TypeScript
 				</a>
 				<NavLink className={s.sideBarLink} to="/resume">
 					Резюме
 				</NavLink>
-				<div className={s.sideBarToClose} onClick={() => {
-					setToggleShowSideBar(true)
-				}}>X
+				<div className={s.sideBarToClose}
+						 onClick={showSideBar}>
+					X
 				</div>
 			</div>
 		</div>

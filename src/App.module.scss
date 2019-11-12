@@ -1,42 +1,30 @@
 .appWrapper {
-  text-align: center;
-  font-size: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+	text-align: center;
+	font-size: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
 
+	.contentWrapper {
+		margin-left: 9.5rem;
+		margin-right: 0.5rem;
+		max-width: 65rem;
+	}
 
-  .headerWrapper {
+	@media screen and (max-width: 650px) {
+		.contentWrapper {
+			margin: 0 auto;
+		}
+	}
 
-
-  }
-
-
-  .contentWrapper {
-    margin-left: 9.5rem;
-    margin-right: 0.5rem;
-    max-width: 65rem;
-  }
-  @media screen and (max-width: 650px) {
-    .contentWrapper {
-      margin: 0 auto;
-    }
-  }
-  .contentWrapper.contentDisableMenu {
-    margin: 0 auto;
-  }
-
-
-
-  .footerWrapper {
-
-
-
-  }
+	.contentWrapper.contentDisableMenu {
+		margin: 0 auto;
+	}
 
 }
-@media screen and (max-width: 650px) {
-  .appWrapper {
-    font-size: 85%;
 
-  }
+@media screen and (max-width: 650px) {
+	.appWrapper {
+		font-size: 85%;
+
+	}
 }

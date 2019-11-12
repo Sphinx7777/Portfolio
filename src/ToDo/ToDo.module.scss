@@ -112,10 +112,10 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 					padding: 2px;
 					cursor: pointer;
 				}
-				.search:hover {
-					background-color: rgba(0,0,0,0.1);
-				}
 
+				.search:hover {
+					background-color: rgba(0, 0, 0, 0.1);
+				}
 
 
 				.closeSearch {
@@ -229,7 +229,6 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 				.taskWrapper {
 					box-shadow: $shad;
 					background-color: rgba(0, 0, 0, 0.1);
-
 
 
 					.taskName {
@@ -437,6 +436,7 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 									display: none;
 								}
 							}
+
 							.taskEdit {
 								display: flex;
 								padding: 0.2rem;
@@ -545,24 +545,11 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 				}
 			}
 
-			.filterWrapper {
-
-
-				.filter {
-
-				}
-
-				.allCount {
-
-				}
-			}
-
 			.todoButtons {
 				flex-direction: column;
 
 				.todoBtnAdd, .todoBtnDell {
 					margin: 0 auto 0.5rem auto;
-
 				}
 			}
 		}

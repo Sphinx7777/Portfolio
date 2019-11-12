@@ -16,12 +16,17 @@ const Resume = React.lazy(() => import("./Resume/Resume"));
 
 class App extends Component {
 	render() {
-		let {menuShowStatus, setToggleShowSideBar} = this.props;
+
+		const {menuShowStatus, setToggleShowSideBar} = this.props;
+
 		return (
 			<div className={s.appWrapper}>
 				<Header {...{menuShowStatus, setToggleShowSideBar}}/>
 				<SideBar {...{menuShowStatus, setToggleShowSideBar}}/>
-				<div className={!menuShowStatus ? s.contentWrapper : s.contentWrapper + ' ' + s.contentDisableMenu}>
+				<div className={
+					!menuShowStatus
+					? s.contentWrapper
+					: s.contentWrapper + ' ' + s.contentDisableMenu}>
 					<Switch>
 						<Route exact path='/' render={() => <Todo {...this.props} />}/>
 						<Route path='/resume' render={() =>

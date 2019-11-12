@@ -2,6 +2,7 @@
 	border-radius: $br;
 	outline: none;
 }
+
 $shad: 0 1px 4px rgba(0, 0, 0, .3),
 -23px 0 20px -23px rgba(0, 0, 0, .6),
 23px 0 20px -23px rgba(0, 0, 0, .6),
@@ -41,19 +42,23 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 			text-decoration: none;
 			color: black;
 			font-weight: bold;
+
 			&:first-child {
 				margin-top: 4rem;
 			}
+
 			&:hover {
 				background: rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
 }
+
 .sideBarWrapper.disableShow {
 	display: none;
 
 }
+
 @media screen and (max-width: 650px) {
 	.sideBarWrapper {
 		left: 0.5rem;
@@ -74,6 +79,7 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 				display: block;
 				padding: 0.5rem;
 				margin-bottom: 0.5rem;
+
 				&:first-child {
 					margin: 0.2rem;
 				}
